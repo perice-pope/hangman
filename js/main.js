@@ -3,7 +3,7 @@
 console.log("JS LOADED")
 var words =           // Words
     [
-        "happiness",
+        "vibes",
         "bliss",
         "love",
         "energy",
@@ -11,12 +11,13 @@ var words =           // Words
 
 var currentWord;
 var allLetters = []
-const maxTries = 10;            // Maximum number of tries player has
+var allGuesses = []
+let maxTries = 10;            // Maximum number of tries player has
 
 const letterBtns = document.querySelectorAll('#letters button');
 const dashSection = document.querySelector('section');
 const guessEl = document.getElementById('guess');
-const msgEl = document.querySelector('h2');
+const congrats = document.querySelector('h2');
 const newGameButton = document.getElementById('newGame');
 
 document.getElementById('letters').addEventListener('click', letterClicker);
@@ -28,6 +29,9 @@ function letterClicker(e){
     var guessedLetter = e.target.innerHTML
     console.log(guessedLetter)
     console.log(currentWord)
+    allGuesses.push(guessedLetter)
+    console.log(allGuesses, "ALL OF EM")
+    render()
     for(var i = 0; i < currentWord.length; i++){
         if(currentWord[i] == guessedLetter.toLowerCase()){
             console.log(guessedLetter, "HELLOOO")
@@ -44,9 +48,12 @@ function render(){
     allLetters.forEach(l => {
         dashSection.innerHTML += l
     })
+    winnerCheck()
 }
 
 function init(){
+    allGuesses = []
+    congrats.innerHTML = ''
     var index = Math.floor(Math.random() * (words.length)); // thankyou overflow...
     currentWord = words[index]
     console.log(currentWord)
@@ -58,9 +65,18 @@ function init(){
     render()
 
 }
-function resetGame() {
-    remainingGuesses = maxTries;
-    gameStarted = false;
+function winnerCheck() {
+    var rightGuess = currentWord.split('')
+    var checker = 0
+    console.log(allGuesses)
+    if (allLetters.join('') == currentWord){
+        congrats.innerHTML = "YOU WIN"
+    }
+    console.log(allGuesses, "IN WINNER FUNC")
+    if(allGuesses.length > maxTries){
+        congrats.innerHTML = "YOU LOSE"
+    }
+
 }
 
     // Use Math.floor to round the random number down to the nearest whole.

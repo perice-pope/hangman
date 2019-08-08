@@ -1,43 +1,47 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman!</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SEI Hangman</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <img id="title-image" src="assets/images/hangman-title.png" alt="Hangman Title Image" />
-        <div class="row">
-            <div class="col-md-6 gameplay-column">
-                <img id="youwin-image" src="assets/images/you-win.png" alt="Winning Image" />
-                <img id="gameover-image" src="assets/images/gameover.png" alt="Game Over Image" />
-                <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
-                <img id="hangmanImage" src="" alt="" />
-            </div>
-            <div class="col-md-6 gameplay-column">
-                <h2>Press Any Key to Get Started!</h2>
-                <h4>Wins</h4>
-                <h5 id="totalWins"></h5>
-                <h4>Current Word</h4>
-                <h3 id="currentWord"></h3>
-                <h4>Guesses Remaining</h4>
-                <h6 id="remainingGuesses"></h6>
-                <h4>Letters Guessed</h4>
-                <h3 id="guessedLetters"></h3>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        resetGame();
-        updateDisplay();
-    </script>
+  <header>SEI HANGMAN</header>
+  <button id="newGame">Play Again</button>
+  <h2></h2>
+  <section></section>
+  <div id="guess"></div>
+  <div id="letters">
+    <button>A</button>
+    <button>B</button>
+    <button>C</button>
+    <button>D</button>
+    <button>E</button>
+    <button>F</button>
+    <button>G</button>
+    <button>H</button>
+    <button>I</button>
+    <button>J</button>
+    <button>K</button>
+    <button>L</button>
+    <button>M</button>
+    <button>N</button>
+    <button>O</button>
+    <button>P</button>
+    <button>Q</button>
+    <button>R</button>
+    <button>S</button>
+    <button>T</button>
+    <button>U</button>
+    <button>V</button>
+    <button>W</button>
+    <button>X</button>
+    <button>Y</button>
+    <button>Z</button>
+  </div>
 </body>
-
 </html>

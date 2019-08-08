@@ -1,8 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
 section {
-    font-size: 70px;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    text-align: center; 
 }
 header {
-    font-size: 100px;
+    font-size: 80px;
+    font-family: 'Beth Ellen', cursive;
+    text-align: center; 
+}
+
+button {
+    font-size: 14px; 
+    border-radius: 15px; 
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 50px; 
+    width: 45px; 
+    height: 40px;    
+}
+
+h2 {
+    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    text-align: center; 
+    color: whitesmoke; 
+    margin-bottom: 70px;
+}
+
+body {
+    background-color: rgb(184, 116, 61);
+    /* background-image: image(hangman.png);  */
+}
+
+div {
+    display: flex;
+    justify-content: center; 
+    align-content: center; 
+}
+
+#newGame button {
+    display: flex;
+    justify-content: center; 
+    align-content: center; 
 }

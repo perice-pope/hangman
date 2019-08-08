@@ -43,7 +43,8 @@ function render(){
     allLetters.forEach(l => {
         dashSection.innerHTML += l
     })
-    winnerCheck()
+
+    winnerCheck() 
 }
 
 function init() {

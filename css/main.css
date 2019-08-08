@@ -17,9 +17,11 @@ button {
     border-radius: 15px; 
     border-style: solid;
     margin-left: 10px;
-    margin-top: 50px; 
+    margin-top: 95px; 
     width: 45px; 
-    height: 40px;    
+    height: 40px;
+    background-color: rgb(214, 214, 214);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;     
 }
 
 h2 {
@@ -33,6 +35,16 @@ h2 {
 body {
     background-color: rgb(184, 116, 61);
     /* background-image: image(hangman.png);  */
+    background-image: url('/images/hangman.png');
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;   */
+    /* background-color: rgb(184, 116, 61); */
+}
+
+.hangmanImg {
+    height: 200px;
+    width: 75px;
 }
 
 div {
@@ -41,8 +53,7 @@ div {
     align-content: center; 
 }
 
-#newGame button {
-    display: flex;
-    justify-content: center; 
-    align-content: center; 
+#newGame {
+
+    margin-left: 200px; 
 }

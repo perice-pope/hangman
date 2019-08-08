@@ -3,10 +3,10 @@
 console.log("JS LOADED")
 var words =           // Words
     [
-        "anxiety",
-        "concern",
-        "stress",
-        "panic",
+        "happiness",
+        "bliss",
+        "love",
+        "energy",
     ];
 
 var currentWord;

@@ -1,7 +1,5 @@
-// variables... 
 
-console.log("JS LOADED")
-var words =           // Words
+var words =           
     [
         "vibes",
         "bliss",
@@ -12,7 +10,7 @@ var words =           // Words
 var currentWord;
 var allLetters = []
 var allGuesses = []
-let maxTries = 10;            // Maximum number of tries player has
+let maxTries = 10;      
 
 const letterBtns = document.querySelectorAll('#letters button');
 const dashSection = document.querySelector('section');
@@ -23,16 +21,13 @@ const newGameButton = document.getElementById('newGame');
 document.getElementById('letters').addEventListener('click', letterClicker);
 newGameButton.addEventListener('click', init); 
 
-// Reset our game-level variables
+// functions 
 
 function letterClicker(e){
     var guessedLetter = e.target.innerHTML
-    console.log(guessedLetter)
-    console.log(currentWord)
     allGuesses.push(guessedLetter)
-    console.log(allGuesses, "ALL OF EM")
     render()
-    for(var i = 0; i < currentWord.length; i++){
+    for(var i = 0; i < currentWord.length; i++) {
         if(currentWord[i] == guessedLetter.toLowerCase()){
             console.log(guessedLetter, "HELLOOO")
             allLetters[i] = guessedLetter.toLowerCase()
@@ -51,10 +46,10 @@ function render(){
     winnerCheck()
 }
 
-function init(){
+function init() {
     allGuesses = []
     congrats.innerHTML = ''
-    var index = Math.floor(Math.random() * (words.length)); // thankyou overflow...
+    var index = Math.floor(Math.random() * (words.length)); 
     currentWord = words[index]
     console.log(currentWord)
     dashSection.innerHTML = ''
@@ -63,20 +58,17 @@ function init(){
         allLetters.push('_ ')
     })
     render()
-
 }
+
 function winnerCheck() {
     var rightGuess = currentWord.split('')
     var checker = 0
-    console.log(allGuesses)
+
     if (allLetters.join('') == currentWord){
         congrats.innerHTML = "YOU WIN"
     }
-    console.log(allGuesses, "IN WINNER FUNC")
+    
     if(allGuesses.length > maxTries){
         congrats.innerHTML = "YOU LOSE"
     }
-
 }
-
-    // Use Math.floor to round the random number down to the nearest whole.

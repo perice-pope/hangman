@@ -1,5 +1,5 @@
 
-var words =           
+let words =           
     [
         "vibes",
         "bliss",
@@ -7,9 +7,9 @@ var words =
         "energy",
     ];
 
-var currentWord;
-var allLetters = []
-var allGuesses = []
+let currentWord;
+let allLetters = []
+let allGuesses = []
 let maxTries = 10;      
 
 const letterBtns = document.querySelectorAll('#letters button');
@@ -21,10 +21,8 @@ const newGameButton = document.getElementById('newGame');
 document.getElementById('letters').addEventListener('click', letterClicker);
 newGameButton.addEventListener('click', init); 
 
-
 // hangmanImg = document.getElementsByTagName('section');
 
-// functions 
 
 function letterClicker(e){
     var guessedLetter = e.target.innerHTML
@@ -32,7 +30,6 @@ function letterClicker(e){
     render()
     for(var i = 0; i < currentWord.length; i++) {
         if(currentWord[i] == guessedLetter.toLowerCase()){
-            console.log(guessedLetter, "HELLOOO")
             allLetters[i] = guessedLetter.toLowerCase()
             render()
         } else {

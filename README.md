@@ -32,6 +32,7 @@ Eventually users will be able to scroll thru different decades and play with wor
 * button sounds 
 * hangman image changes style with decade 
 * User ability to add words as they play 
+* guess countdown 
 
 **Play Here**
 

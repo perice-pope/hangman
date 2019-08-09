@@ -21,6 +21,9 @@ const newGameButton = document.getElementById('newGame');
 document.getElementById('letters').addEventListener('click', letterClicker);
 newGameButton.addEventListener('click', init); 
 
+
+// hangmanImg = document.getElementsByTagName('section');
+
 // functions 
 
 function letterClicker(e){
@@ -39,14 +42,12 @@ function letterClicker(e){
 }
 
 function render(){
-    // hangmanImg.style.backgroundPosition = `${-75 * wrongGuesses.length}px 0`;
 
     dashSection.innerHTML = ''
     allLetters.forEach(l => {
         dashSection.innerHTML += l
     })
 
-   
     winnerCheck() 
 }
 

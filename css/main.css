@@ -35,17 +35,17 @@ h2 {
 body {
     background-color: rgb(184, 116, 61);
     /* background-image: image(hangman.png);  */
-    background-image: url('/images/hangman.png');
     /* background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right top;   */
     /* background-color: rgb(184, 116, 61); */
 }
 
-.hangmanImg {
-    height: 200px;
+/* section {
+    background-image: url('/images/hangman.png');
     width: 75px;
-}
+    height: 100px;
+} */
 
 div {
     display: flex;
@@ -54,6 +54,5 @@ div {
 }
 
 #newGame {
-
     margin-left: 200px; 
 }

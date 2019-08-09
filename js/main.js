@@ -56,7 +56,6 @@ function init() {
     congrats.innerHTML = ''
     var index = Math.floor(Math.random() * (words.length)); 
     currentWord = words[index]
-    console.log(currentWord)
     dashSection.innerHTML = ''
     allLetters = []
     currentWord.split('').forEach(l =>{
